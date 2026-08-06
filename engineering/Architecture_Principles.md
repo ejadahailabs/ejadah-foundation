@@ -59,7 +59,23 @@ not a feature.
 Two engines before eleven. One workbench before six. Direction documents are direction —
 never a licence to build abstraction now.
 
-## 9. No component named "intelligence"
+## 9. The cloud supports engineering — it never owns it
+
+Engineering Intelligence is local, deterministic and repository-first. Cloud services —
+identity, licensing, billing, collaboration, telemetry — exist around the workbench,
+never inside its truth.
+
+**Consequence, stated as a rule:** commercial infrastructure must never become a
+dependency of engineering. When identity is unreachable, licensing cannot phone home,
+telemetry is off, or billing is down — only commercial capabilities degrade. Analysis,
+evidence and determinism continue, including fully air-gapped. An expired licence
+degrades *edition*, never correctness.
+
+**Why:** this is the line between us and every tool that centralizes engineering data
+in a proprietary cloud. A customer who cannot trust that their engineering works
+without us has not bought a tool; they have accepted a hostage.
+
+## 10. No component named "intelligence"
 
 A box with that name collects whatever nobody else wants to own. The *product* carries
 the name; no component does.
