@@ -49,23 +49,44 @@ Every item — whatever its type — carries the same fields:
 Containment (`parent` / sub-issues) is structure, not a thread verb. The set is closed:
 a new verb is a governance change to this document, never an improvisation.
 
+## The hierarchy — containment is native, not a verb
+
+Items nest four deep, using GitHub's own sub-issue links rather than any thread verb:
+
+```
+Product  →  Epic  →  Feature  →  Task
+```
+
+A Product is the top; Epics are its goals; Features are releasable slices; **Tasks are the
+leaves — the only thing an executor runs.** A task hangs off a feature, never directly off
+an epic. Containment is structure; the thread verbs above are lineage. Keeping the two
+apart is what lets a board be a pure projection — nesting comes from sub-issue links,
+meaning comes from the verbs, and neither is re-authored anywhere else.
+
 ## In practice
 
-**In an issue body:**
+**In an issue body**, the lineage verbs sit in the digital-thread block, and a dedicated
+`Depends-on:` line carries the blockers the daemon reads to decide eligibility:
 ```
 implements: #12
-depends_on: #9
 derives_from: adr/ADR-0041
+Depends-on: #9
 ```
 
-**In a commit message**, as trailer lines the thread can be walked from:
-```
-Work-Item: #12
-Verifies: #12
-```
+**A task also carries a Lifecycle checklist** — claimed → implemented → self-tested → PR
+opened → reviewed → CI green → merged → evidence recorded → closed. The executor ticks
+what it does; the daemon ticks what it can observe (PR opened, CI green, merged, closed).
 
-**A PR** references its item; merging it is the `implements` edge; the gate run linked
-at close is the `verifies` edge.
+**A PR references its item** (`implements #12`, `closes #12`); merging it is the
+`implements` edge, and the review run linked at close is the `verifies` edge.
+
+## The mechanism is replaceable; this document is not
+
+How these rules are *run* — the task template and its Lifecycle, the board tool, the
+daemons that derive status and land PRs, the queue, the executor identifiers — is the
+organisation's **Control Center operating model**, a mechanism that may be rewritten as
+the organisation learns. This document is the authority it must conform to; where they
+differ, the mechanism changes. Other repositories reference this; none depend on it.
 
 ## Scope
 
