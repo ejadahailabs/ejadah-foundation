@@ -4,7 +4,7 @@
 >
 > The code can be rewritten. This methodology is what gives the Platform its identity,
 > and it was not designed up front — it was extracted from what repeatedly worked while
-> building E-REW. Treat it as a strategic asset: the basis of IP, training, enterprise
+> building Sanad. Treat it as a strategic asset: the basis of IP, training, enterprise
 > offerings and hiring, alongside the software.
 
 Six principles. Each states a rule, why it exists, and how it is enforced — an

@@ -35,7 +35,8 @@ organisation its memory, not its ability to ship.
 
 **Rejected: keep governance in the product repository.** Forces later products to depend
 on a peer product for company standards, inheriting its release cadence and its
-lifecycle. Also misrepresents scope — company principles are not E-REW's property.
+lifecycle. Also misrepresents scope — company principles are not E-REW's (now Sanad's)
+property.
 
 **Rejected: nine flat files.** The charter's original list. Flat structures give no
 signal about *rate of change* — Vision moves on a decade scale, Roadmap per milestone.

@@ -29,6 +29,28 @@ Every ID is `E-` plus three letters, uppercase, hyphenated. No exceptions, no al
 
 ---
 
+## Resolved: the product is Sanad
+
+⚠️ **The table above is superseded for the shipping product.** ADR-0054 in the E-REW
+repository (2026-08-14) renamed the product from `E-REW` to **Sanad** — descriptor
+"Sanad — Engineering Intelligence Workbench" — and replaced the seven-workbench family
+model with one product organised into capability packs (Sanad Requirements, Sanad
+Interfaces, Sanad Data Dictionary, Sanad Concepts, Sanad Verification, Sanad Drift). The
+`E-REW` row above still names the *repository* and the historical release line
+(0.1.0–0.3.0); it no longer names the product.
+
+This document keeps the original table below because deleting it would hide that the
+decision was made, per the same policy this file already applies to the "REW" conflict.
+Where any document says "E-REW" meaning the shipping product, read "Sanad." Where it
+means the repository, no change: `github.com/ejadahailabs/E-REW` stays as-is (rule 4's
+lowercase-repository convention was never applied to it in practice — a separate,
+still-open naming question, not this one).
+
+Rule 4 below is superseded in the same way: the repository is `E-REW`, but the product
+it holds is no longer the brand — the brand is **Sanad**.
+
+---
+
 ## Resolved conflict — "REW"
 
 ⚠️ **Historical documents expand REW as "Reverse Engineering Workbench".** That is

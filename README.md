@@ -45,7 +45,7 @@ A document that names a specific product's internals is in the wrong repository.
 
 ## Status
 
-Established 2026-08-04. Ejadah AI Labs operates one shipping product (E-REW) and one
+Established 2026-08-04. Ejadah AI Labs operates one shipping product (Sanad) and one
 adopted platform architecture. Everything here is written from what is proven in that
 product, not from what is imagined for the others — the same discipline
 `engineering/Engineering_Principles.md` requires of code.

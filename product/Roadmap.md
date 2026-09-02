@@ -7,14 +7,14 @@
 
 | | |
 |---|---|
-| **Shipping** | E-REW — requirements, traceability, quality, impact, dashboards |
+| **Shipping** | Sanad (repository: E-REW) — requirements, traceability, quality, impact, dashboards |
 | **Adopted** | Platform topology · single-repository strategy · workbench interoperability |
 | **Enforced** | Headless core · kernel seam ratchet, in CI |
 | **Established** | This constitution |
 
-## Next — E-REW depth, not product breadth
+## Next — Sanad depth, not product breadth
 
-The strategic question is not "which workbench next" but **"is E-REW indispensable to
+The strategic question is not "which workbench next" but **"is Sanad indispensable to
 one real team yet"**. Until that is yes, a second workbench divides attention across two
 half-products.
 
@@ -33,7 +33,7 @@ Priority order:
 > **A real user waiting for it.** Not an interesting one.
 
 At that moment, and not before: rename to the ecosystem repository, extract the kernel
-into a package, and add the second product beside E-REW. The extraction is a directory
+into a package, and add the second product beside Sanad. The extraction is a directory
 move plus a mechanical rename — the seam is already measured.
 
 ## Later, in dependency order

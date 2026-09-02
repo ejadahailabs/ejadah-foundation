@@ -13,12 +13,12 @@ at a time, and lets a customer get real value without buying a suite.
 **No workbench ever invokes another.** They compose through two things they already
 share: **the Git repository** and **the graph ontology**.
 
-E-AEW writes architecture artefacts as files with declared roles. E-REW's producers read
-them as facts. The graph turns roles into typed edges. E-REW then answers questions about
+E-AEW writes architecture artefacts as files with declared roles. Sanad's producers read
+them as facts. The graph turns roles into typed edges. Sanad then answers questions about
 architecture coverage without knowing E-AEW exists.
 
 ```
-E-REW ──writes──►  ┌──────────────────────┐
+Sanad ──writes──►  ┌──────────────────────┐
 E-AEW ──writes──►  │  the Git repository  │ ──► producers ──► graph ──► answers
 E-VEW ──writes──►  └──────────────────────┘
 ```
@@ -35,7 +35,7 @@ estimated, never reported as complete.
 ## The lifecycle chain
 
 ```
-E-REW      requirements
+Sanad      requirements
   ↓
 E-AEW      architecture
   ↓
@@ -55,15 +55,15 @@ Every arrow is *files plus ontology* — never a call.
 
 | Order | Product | Trigger |
 |---|---|---|
-| 1 | **E-REW** | shipping |
+| 1 | **Sanad** | shipping |
 | 2 | next workbench | **a real user waiting for it** |
 | 3+ | the rest | same |
 
 There is no schedule, and that is deliberate. A workbench is built when someone needs it,
 because the lessons that shape it come from shipping the previous one.
 
-## E-REW is the reference implementation
+## Sanad is the reference implementation
 
-Not merely the first product. The Platform is **extracted from** E-REW as capabilities
+Not merely the first product. The Platform is **extracted from** Sanad as capabilities
 prove themselves — so the shared substrate grows from demonstrated need rather than
 speculation. Every later workbench inherits proven code, not a guess.

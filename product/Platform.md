@@ -14,7 +14,7 @@ question/answer contract and the AI gateway.
 
 > **The Platform is a name for a direction, not a shipped artefact.**
 
-Today it is the discipline-invariant part of one product, E-REW. It becomes a platform
+Today it is the discipline-invariant part of one product, Sanad. It becomes a platform
 when a second workbench reuses it — not before, and calling it one earlier would be a
 layer of indirection with a hopeful name.
 
