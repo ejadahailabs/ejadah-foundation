@@ -56,13 +56,13 @@ not a feature.
 
 ## 8. Do not generalise ahead of demand
 
-Two engines before eleven. One workbench before six. Direction documents are direction —
-never a licence to build abstraction now.
+Two engines before eleven. One capability proven before the next one started. Direction
+documents are direction — never a licence to build abstraction now.
 
 ## 9. The cloud supports engineering — it never owns it
 
 Engineering Intelligence is local, deterministic and repository-first. Cloud services —
-identity, licensing, billing, collaboration, telemetry — exist around the workbench,
+identity, licensing, billing, collaboration, telemetry — exist around the product,
 never inside its truth.
 
 **Consequence, stated as a rule:** commercial infrastructure must never become a
