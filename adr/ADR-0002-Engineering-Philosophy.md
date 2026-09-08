@@ -14,7 +14,7 @@ measurable technical debt (the Ratchet Principle), single-SHA reproducibility.
 ## Context
 
 The methodology was **not designed up front**. It was extracted from what repeatedly
-worked while building E-REW — each principle traceable to a specific decision, and
+worked while building E-REW (now Sanad) — each principle traceable to a specific decision, and
 several to a specific defect that motivated them.
 
 That origin is why it is worth protecting. It is not a set of opinions about good

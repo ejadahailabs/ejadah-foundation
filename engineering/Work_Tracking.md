@@ -1,9 +1,16 @@
 # Work Tracking — every change is a Work Item
 
-Derived from **APDS** (the Work Item Model and Digital Thread), adapted for Ejadah and
-self-contained here so no repository references another company's governance. Within
-Ejadah, this document is the authority; on conflict with anything else here, the
+Derived from **APDS** (the Work Item Model and the **APDS digital thread**), adapted for
+Ejadah and self-contained here so no repository references another company's governance.
+Within Ejadah, this document is the authority; on conflict with anything else here, the
 foundation wins.
+
+> **Two different threads, and they must not be confused.** The **APDS digital thread** is
+> the trail of our own work — which item derives from which, what implements it, what
+> verifies it. The **digital thread of a product** is what Sanad generates, validates and
+> governs for a customer: requirements, models, code, tests and certification evidence,
+> continuously aligned. This document governs the first. Say "APDS digital thread" whenever
+> the internal one is meant.
 
 ## The rule
 
@@ -65,7 +72,7 @@ meaning comes from the verbs, and neither is re-authored anywhere else.
 
 ## In practice
 
-**In an issue body**, the lineage verbs sit in the digital-thread block, and a dedicated
+**In an issue body**, the lineage verbs sit in the APDS digital-thread block, and a dedicated
 `Depends-on:` line carries the blockers the daemon reads to decide eligibility:
 ```
 implements: #12
@@ -90,6 +97,6 @@ differ, the mechanism changes. Other repositories reference this; none depend on
 
 ## Scope
 
-Applies to every Ejadah repository: E-REW, EPS, ejadah-website, this foundation, and
-all future products. Each repository's board (PROGRAM_BOARD or Projects view) is a
+Applies to every Ejadah repository: E-REW (the Sanad repository), EPS, ejadah-website,
+this foundation, and any repository added later. Each repository's board (PROGRAM_BOARD or Projects view) is a
 **projection** of its Work Items — never a second place where truth lives.

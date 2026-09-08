@@ -2,13 +2,18 @@
 
 > **This document is the company's primary intellectual property.**
 >
-> The code can be rewritten. This methodology is what gives the Platform its identity,
-> and it was not designed up front — it was extracted from what repeatedly worked while
-> building E-REW. Treat it as a strategic asset: the basis of IP, training, enterprise
-> offerings and hiring, alongside the software.
+> The code can be rewritten. This methodology is what gives Sanad its identity, and it was
+> not designed up front — it was extracted from what repeatedly worked while building it.
+> Treat it as a strategic asset: the basis of IP, training, enterprise offerings and
+> hiring, alongside the software.
 
-Six principles. Each states a rule, why it exists, and how it is enforced — an
+Ten principles. Each states a rule, why it exists, and how it is enforced — an
 unenforced principle is a preference.
+
+Principles 1–6 were recorded by [ADR-0002](../adr/ADR-0002-Engineering-Philosophy.md) on
+2026-08-04. Principles 7–10 were adopted in practice over the months after and written down
+on 2026-09-08; they were rules the organisation already ran on, living only in conversation,
+which is exactly the failure ADR-0002 exists to prevent.
 
 ---
 
@@ -120,10 +125,86 @@ anything that would split reconstruction carries the burden of proof.
 
 ---
 
+## 7. The vocabulary of the guidance, not our own
+
+> Where a standard has a word for it, we use that word.
+
+DO-178C, DO-330, ARP4754A, ISO 26262, INCOSE and SysML v2 name requirements, design,
+verification, review, configuration management and qualification. We use their terms in
+documents, in the product surface and in code identifiers, and we do not coin a synonym
+because ours reads better.
+
+**Why:** our reader is an engineer who is accountable under one of those standards. An
+invented term forces them to translate before they can trust, and a term we invented cannot
+be cited in an argument with an authority. It also hides gaps: a coined word can mean
+whatever the writer needed it to mean that day.
+
+**Enforced by:** a terminology map in the product repository's qualification set, and by
+review — a new term is a defect unless the map shows no standard supplies one.
+
+---
+
+## 8. The organisation configures; we recommend
+
+> Every rule the product applies is chosen by the organisation using it. We ship
+> recommendations, never settings.
+
+Rule packs, criticality bands, profiles, thresholds and templates are staged per capability
+and adopted deliberately. Nothing is enabled because we thought it sensible.
+
+**Why:** a rule the customer did not choose is a rule they cannot defend to an authority, and
+the first finding it produces that they disagree with switches the whole tool off. Their
+process is theirs; we make it enforceable, not ours.
+
+**Enforced by:** compiled governance (principle 2) — configuration is data, resolved once, and
+a default that cannot be traced to an organisation's choice is a defect.
+
+---
+
+## 9. Requirements are the source of truth
+
+> When code and requirement disagree, the code is wrong.
+
+The direction is strictly top-down: requirements, then design, then implementation, then
+verification evidence. Code changes to meet the requirement. A requirement changes only by
+being changed deliberately, as its own decision, before the work that depends on it starts.
+
+**Why:** the reverse — adjusting the requirement to match what was built — produces a document
+set that agrees with itself and describes nothing anyone decided. It is undetectable
+afterwards, and it is the failure certification evidence exists to make impossible.
+
+**Enforced by:** traceability with coverage; an implementation with no requirement above it,
+or a requirement edited to match a merged change, fails review.
+
+---
+
+## 10. Design first, then implement — verified by someone else
+
+> No line of code before the design is complete, and no feature is done on the word of
+> whoever built it.
+
+A feature is design-complete when its system and high-level requirements are written, its
+design decision is recorded with rejected alternatives, its tests are specified, and no
+question is open. Only then does implementation start. Implementation and verification are
+performed by different parties, and the feature closes on a signed record, not an assertion.
+
+**Why:** design questions answered mid-implementation are answered by whatever is cheapest to
+type. And a party verifying its own work verifies its own assumptions along with it — the
+independence requirement in the guidance is not bureaucracy, it is the only thing that
+catches a misunderstanding shared by author and code.
+
+**Enforced by:** the qualification set in the product repository, written to DO-330: one
+record per feature, carrying the requirements, the design decision, the test specification,
+the verification result and the signature. **Nothing is called complete until that record is
+signed.**
+
+---
+
 ## How these compose
 
-1 and 6 make output **defensible**. 2 makes it **consistent**. 3 keeps it **honest** as
-AI capability grows. 4 and 5 keep the codebase **movable** — able to become a platform
-without having to guess in advance what the platform is.
+1 and 6 make output **defensible**. 2 and 8 make it **consistent** and the customer's own.
+3 keeps it **honest** as AI capability grows. 4 and 5 keep the codebase **movable**. 7 keeps
+it **legible** to the engineer who has to defend it. 9 and 10 keep the thread pointing one
+way, so what is built is what was decided.
 
 Remove any one and the others weaken. That interlock, not any single rule, is the asset.
