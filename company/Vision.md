@@ -41,4 +41,6 @@ Engineering methodologies distributed like packages. Industry standards as reusa
 process packs. AI agents working under organisation-approved governance. Every artefact
 contributing to a knowledge graph whose value compounds as it grows.
 
-We reach it one proven workbench at a time — never by building the platform first.
+We reach it one proven capability at a time, inside one product — never by promising a
+family of products first. Each capability is a build in progress until its verification
+record is signed. See [../adr/ADR-0003-One-Product-One-Platform.md](../adr/ADR-0003-One-Product-One-Platform.md).
