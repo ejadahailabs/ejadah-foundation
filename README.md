@@ -28,7 +28,7 @@ only cost the organisation its memory.
 |---|---|---|
 | `company/` | Vision, Mission, Values, Branding | rarely |
 | `engineering/` | Principles, standards, AI governance | deliberately |
-| `product/` | Platform, product family, naming, roadmap | per milestone |
+| `product/` | Platform architecture, capabilities, naming, roadmap | per milestone |
 | `adr/` | Company-level decisions | append-only |
 | `templates/` | Starting points every repository copies | rarely |
 
@@ -45,7 +45,11 @@ A document that names a specific product's internals is in the wrong repository.
 
 ## Status
 
-Established 2026-08-04. Ejadah AI Labs operates one shipping product (Sanad) and one
-adopted platform architecture. Everything here is written from what is proven in that
-product, not from what is imagined for the others — the same discipline
-`engineering/Engineering_Principles.md` requires of code.
+Established 2026-08-04. Ejadah AI Labs makes one product: **Sanad**, the Ejadah Engineering
+Intelligence Platform. Sanad is a **build in progress**, released as a free beta. Its
+capabilities are either a build in progress or planned — nothing is called complete until
+its signed verification record exists (`adr/ADR-0003-One-Product-One-Platform.md`).
+
+Everything here is written from what is proven in that product, not from what is imagined
+for products we have not built — the same discipline `engineering/Engineering_Principles.md`
+requires of code.
