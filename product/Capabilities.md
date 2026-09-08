@@ -17,6 +17,10 @@ number and no product internal — those belong in the product repository (ADR-0
 
 A capability often serves more than one outcome. The group below names its primary one.
 
+*Watch **Govern** in customer conversations.* Some buyers hear it as compliance and audit
+only, and miss that it covers baselines, reviews and the whole time axis. An observation from
+use, not a change to the name.
+
 ## Build in progress
 
 Everything here exists in the beta and is a build in progress. **Nothing is called complete

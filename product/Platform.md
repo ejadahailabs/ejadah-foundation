@@ -1,7 +1,8 @@
 # The Platform
 
-**Sanad is the Ejadah Engineering Intelligence Platform.** This document describes its
-architecture. The name is the product's; there is no separate substrate to name. See
+**Sanad is the Ejadah Engineering Intelligence Platform — it generates, validates and governs
+the digital thread of a product.** This document describes its architecture. The name is the
+product's; there is no separate substrate to name. See
 [../adr/ADR-0003-One-Product-One-Platform.md](../adr/ADR-0003-One-Product-One-Platform.md).
 
 ## What it is, precisely

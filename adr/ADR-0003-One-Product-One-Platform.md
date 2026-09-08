@@ -26,6 +26,11 @@ discipline, and never "regulated systems" as the audience.
 Capabilities live inside Sanad and compose through the Git repository and the graph
 ontology. There is no second product, and no separate substrate to name.
 
+And the distinction that carries the most weight of any sentence we write:
+
+> **Requirements tools, MBSE tools and ALM tools manage artifacts. Sanad manages and
+> validates the relationships between artifacts.**
+
 ## Context
 
 The seven-workbench family was written when one product existed and the honest question was
@@ -48,13 +53,51 @@ analysis runtime, the evidence currency, the question/answer contract and the AI
 That architecture is unchanged; only its framing changes. It is an internal architecture
 fact, not a second brand.
 
-## 2. What replaces the family
+## 2. Why we rejected the workbench family
+
+The fact is recorded below under *Rejected alternatives*. The reasoning belongs here,
+because it is what a future reader will need when the family looks tempting again.
+
+**One product is easier to understand.** A buyer should never have to learn seven names
+before understanding what we make. Seven names is a taxonomy lesson standing between the
+reader and the first useful sentence.
+
+**One product is easier to deploy.** One extension, one setup, one version, one licence. A
+family means the customer decides which pieces they have, and every support conversation
+starts by establishing that.
+
+**One product is easier to market.** Every surface says one thing. A family divides the
+message seven ways and each share is too small to land.
+
+**Capabilities can evolve independently without becoming products.** A capability may be
+deep or shallow, ahead or behind, and may be retired — none of which requires a name, a
+release line, a price or a commitment to a customer. Making it a product freezes all of
+that on the day it is named.
+
+**Customers buy outcomes, not internal architectural partitions.** The discipline split
+between requirements, architecture, software, verification, review and certification is our
+map of the work, not the customer's. What they buy is the digital thread of their product
+generated, validated and governed. Selling them our internal partition asks them to pay for
+our org chart.
+
+## 3. What replaces the family
 
 `product/Capabilities.md` replaces `product/Product_Family.md`. It lists capability names and
 the outcome each serves — **Understand · Generate · Validate · Govern** — and nothing else. It
 names no file, no rule number and no product internal, per ADR-0001.
 
-## 3. Status vocabulary
+## 4. The two halves of the sentence are coupled
+
+**Never write "Sanad is an Engineering Intelligence Platform." on its own.** The sentence
+always continues "…that generates, validates and governs the digital thread of a product".
+
+*Engineering Intelligence* is a category we coined; a reader has no prior meaning for it and
+will supply one of their own. *Digital thread* is recognised vocabulary and carries an exact
+meaning. Each half carries the other: the coined term is what makes the claim ours, the
+recognised term is what makes it legible. Split them and one sentence says nothing and the
+other says something we did not mean.
+
+## 5. Status vocabulary
 
 Two words are permitted for anything in Sanad: **build in progress** (it exists in the beta)
 and **planned**. Nothing is called complete, built, shipping, qualified or available.
@@ -63,7 +106,7 @@ and **planned**. Nothing is called complete, built, shipping, qualified or avail
 
 This binds every document in this repository, not only the product ones.
 
-## 4. What is retired from public use
+## 6. What is retired from public use
 
 The identifiers **E-AEW · E-SWE · E-VEW · E-RVW · E-SEW · E-CEW** name nothing that exists.
 They are retired from every public surface — website, marketing, product documentation,
@@ -116,6 +159,7 @@ moves under History with a pointer here.
 
 - Any public surface naming E-AEW, E-SWE, E-VEW, E-RVW, E-SEW or E-CEW as a product.
 - Describing Sanad as one of several workbenches, or naming a substrate beneath it.
+- Writing "Sanad is an Engineering Intelligence Platform." without the rest of the sentence.
 - The words complete, built, shipping, qualified or available applied to any part of Sanad on
   any surface.
 - A capability invoking another capability. Composition is files plus ontology.

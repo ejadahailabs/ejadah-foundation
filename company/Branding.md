@@ -13,7 +13,19 @@ contradicts either. Short form, for a hero, a footer or a meta description: **Sa
 validates and governs the digital thread of a regulated product.**
 
 Retired 2026-09-08: "requirements and engineering governance platform". It reads as a peer of
-the requirements tools Sanad is not one of.
+the requirements tools Sanad is not one of. Where the difference has to be said in one line:
+
+> **Requirements tools, MBSE tools and ALM tools manage artifacts. Sanad manages and
+> validates the relationships between artifacts.**
+
+## The sentence does not split
+
+**Never write "Sanad is an Engineering Intelligence Platform." on its own.** It always
+continues "…that generates, validates and governs the digital thread of a product".
+
+*Engineering Intelligence* is a category we coined and a reader has no prior meaning for it.
+*Digital thread* is recognised and exact. Each half carries the other. The short form above
+is the only permitted abbreviation, and it keeps the recognised half.
 
 ## Names, exactly
 
@@ -56,6 +68,13 @@ recognise overstatement instantly.
 | "No hazard role declared — safety analysis stood down" | "100 % compliant" |
 | Name the limitation | Imply completeness we cannot prove |
 | Use the guidance's own words | Coin vocabulary of our own |
+
+**On the order of the three verbs.** The canonical sentence keeps **generate → validate →
+govern** and does not change. Marketing copy *may* lead with validation — "Every artifact
+generated. Every relationship validated. Every decision traceable." — because tools that
+generate engineering artifacts are common and tools that validate the relationships across a
+whole lifecycle are rare. Lead with the rare half where the reader is choosing between
+vendors; the canonical sentence stays as written wherever the product is defined.
 
 Never claim certification. We produce *evidence for* certification; the authority
 certifies. Blurring that is a legal and professional error, not a marketing choice.

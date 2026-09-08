@@ -23,6 +23,16 @@ evidence, and without asking anyone to abandon the tools they already use.
 We do not replace ALM, MBSE, SCM, PLM or CI. We connect them, and we answer questions
 none of them can answer alone.
 
+Stated as plainly as it can be stated:
+
+> **Requirements tools, MBSE tools and ALM tools manage artifacts. Sanad manages and
+> validates the relationships between artifacts.**
+
+An artifact on its own is a document. A requirement matters because of what it derives from,
+what implements it, what verifies it and what it affects when it changes. Those relationships
+are where certification evidence comes from, where drift shows up first, and where every tool
+that owns one slice of the lifecycle has nothing to say.
+
 ## What makes it defensible
 
 Not the features. Every individual feature is implementable by a competent team with a
