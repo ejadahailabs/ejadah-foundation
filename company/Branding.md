@@ -1,5 +1,10 @@
 # Branding
 
+> **Visual identity, 2026-11-21.** Logo, colour, type, voice registers, imagery, product UI,
+> digital marketing, templates and design tokens live in **[../brand/](../brand/README.md)**.
+> This file keeps the words: the sentence, the names, the status words. Where the two
+> disagree on wording, this file and [ADR-0003](../adr/ADR-0003-One-Product-One-Platform.md) win.
+
 ## The two lines every surface aligns to
 
 > **Sanad is an Engineering Intelligence Platform that generates, validates and governs the
