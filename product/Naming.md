@@ -3,6 +3,9 @@
 **Authoritative.** Where any document, diagram, marketing asset or repository disagrees
 with this file, this file is correct and the other is a defect.
 
+> **Visual identity, 2026-11-21.** How the names look (logos, lockup, colour, type) is set
+> in [../brand/](../brand/README.md). It follows this file and ADR-0003 on every word.
+
 ---
 
 ## Company, product, capabilities

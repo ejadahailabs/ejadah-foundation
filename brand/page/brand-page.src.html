@@ -1,0 +1,289 @@
+<title>Ejadah × Sanad Brand</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one reading column of numbered chapters (the guide's real order), with swatch and specimen grids that break wider. Dark-first, like the brand. */
+:root {
+  --bg: #070B14; --bg-raised: #0B1220; --line: #16203A;
+  --text: #E8ECF5; --text-dim: #9AA7BF; --text-muted: #7A88A3;
+  --accent: #C9A227; --accent-text: #E6C158;
+  --progress: #5FB98A; --planned: #7A88A3;
+  --sans: Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  color-scheme: dark;
+}
+@media (prefers-color-scheme: light) { :root:not([data-theme="dark"]) {
+  --bg: #F7F8FB; --bg-raised: #FFFFFF; --line: #DDE2EC;
+  --text: #070B14; --text-dim: #4A5670; --text-muted: #5B6780;
+  --accent: #8A6F1C; --accent-text: #7A6218;
+  --progress: #1F7A4D; --planned: #5B6780; color-scheme: light; } }
+:root[data-theme="light"] {
+  --bg: #F7F8FB; --bg-raised: #FFFFFF; --line: #DDE2EC;
+  --text: #070B14; --text-dim: #4A5670; --text-muted: #5B6780;
+  --accent: #8A6F1C; --accent-text: #7A6218;
+  --progress: #1F7A4D; --planned: #5B6780; color-scheme: light; }
+
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--text); font: 400 16px/1.65 var(--sans); -webkit-font-smoothing: antialiased; }
+.wrap { max-width: 1080px; margin: 0 auto; padding-block: 0 96px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+a { color: var(--accent-text); }
+:focus-visible { outline: 2px solid var(--accent-text); outline-offset: 3px; border-radius: 2px; }
+code, .mono { font-family: var(--mono); font-size: .92em; }
+h1, h2, h3 { text-wrap: balance; margin: 0; font-weight: 600; }
+p { margin: 0; }
+
+.hero { padding-block: 88px 64px; display: grid; gap: 28px; border-bottom: 1px solid var(--line); }
+.hero .marks { display: flex; gap: 20px; align-items: center; }
+.hero .marks svg { width: 72px; height: 72px; }
+.eyebrow { font-size: 12px; font-weight: 500; letter-spacing: .18em; text-transform: uppercase; color: var(--accent-text); }
+.hero h1 { font-size: clamp(2.4rem, 6vw, 4.2rem); letter-spacing: -.045em; line-height: 1.05; max-width: 16ch; }
+.hero .lede { font-size: 1.15rem; color: var(--text-dim); max-width: 60ch; }
+.triad { display: flex; flex-wrap: wrap; gap: 10px; }
+.triad span { font-family: var(--mono); font-size: 13px; padding: 6px 12px; border: 1px solid var(--line); border-radius: 999px; color: var(--text-dim); }
+.triad span:last-child { color: var(--accent-text); border-color: var(--accent); }
+
+nav.toc { display: flex; flex-wrap: wrap; gap: 6px 18px; padding-block: 20px; border-bottom: 1px solid var(--line); font-size: 14px; }
+nav.toc a { color: var(--text-dim); text-decoration: none; }
+nav.toc a:hover { color: var(--text); }
+nav.toc b { font-family: var(--mono); font-weight: 400; color: var(--text-muted); margin-right: 6px; }
+
+section.ch { padding-block: 72px 8px; display: grid; gap: 28px; }
+.ch-head { display: grid; gap: 10px; }
+.ch-head .num { font-family: var(--mono); font-size: 13px; color: var(--text-muted); }
+.ch-head h2 { font-size: 2rem; letter-spacing: -.03em; line-height: 1.15; }
+.ch-head p { color: var(--text-dim); max-width: 64ch; }
+h3 { font-size: 1.05rem; letter-spacing: -.01em; }
+.prose { display: grid; gap: 12px; max-width: 68ch; color: var(--text-dim); }
+.prose strong { color: var(--text); font-weight: 600; }
+
+.table-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 6px; }
+table { border-collapse: collapse; width: 100%; font-size: 14px; }
+th, td { text-align: left; padding: 10px 14px; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { font-size: 11px; font-weight: 500; letter-spacing: .14em; text-transform: uppercase; color: var(--text-muted); background: var(--bg-raised); }
+tr:last-child td { border-bottom: none; }
+td.never { color: var(--text-muted); }
+td .num { font-variant-numeric: tabular-nums; }
+
+.grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fill, minmax(min(100%, 230px), 1fr)); }
+.tile { border: 1px solid var(--line); border-radius: 6px; overflow: hidden; display: grid; min-width: 0; }
+.tile .stage { display: grid; place-items: center; padding: 28px; min-height: 170px; }
+.tile .stage svg { width: 110px; height: 110px; max-width: 100%; }
+.tile .cap { padding: 12px 14px; font-size: 13px; color: var(--text-dim); border-top: 1px solid var(--line); background: var(--bg-raised); }
+.tile .cap b { display: block; color: var(--text); font-weight: 500; font-family: var(--mono); font-size: 12px; margin-bottom: 2px; }
+.on-ink { background: #070B14; color: #C9A227; }
+.on-paper { background: #F7F8FB; color: #7A6218; }
+
+.proportion { display: flex; height: 56px; border-radius: 6px; overflow: hidden; border: 1px solid var(--line); }
+.proportion div { display: flex; align-items: flex-end; padding: 8px 10px; font-size: 12px; font-family: var(--mono); }
+.legend-row { display: flex; flex-wrap: wrap; gap: 8px 20px; font-size: 13px; color: var(--text-dim); }
+
+.swatches { display: grid; gap: 12px; grid-template-columns: repeat(auto-fill, minmax(min(100%, 200px), 1fr)); }
+.sw { border: 1px solid var(--line); border-radius: 6px; overflow: hidden; min-width: 0; }
+.sw .chip { height: 84px; display: flex; align-items: flex-end; justify-content: space-between; padding: 10px 12px; font-size: 13px; font-weight: 600; }
+.sw .meta { padding: 10px 12px; font-size: 12.5px; color: var(--text-dim); display: grid; gap: 4px; background: var(--bg-raised); }
+.sw .meta code { color: var(--text); }
+.ratio { font-family: var(--mono); font-size: 11.5px; padding: 2px 6px; border-radius: 4px; font-variant-numeric: tabular-nums; }
+.ok { color: var(--progress); } .warn { color: var(--accent-text); } .bad { color: #EE7C7F; }
+:root[data-theme="light"] .bad { color: #A21106; }
+@media (prefers-color-scheme: light) { :root:not([data-theme="dark"]) .bad { color: #A21106; } }
+
+.why { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); }
+.why div { padding: 18px; border: 1px solid var(--line); border-radius: 6px; display: grid; gap: 6px; align-content: start; }
+.why .dot { width: 14px; height: 14px; border-radius: 50%; }
+.why p { font-size: 14px; color: var(--text-dim); }
+
+.status-row { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+.pill { display: inline-flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 500; padding: 5px 14px; border-radius: 999px; border: 1px solid var(--line); }
+.pill i { width: 9px; height: 9px; border-radius: 50%; display: inline-block; }
+.pill.progress { color: var(--progress); } .pill.progress i { background: var(--progress); }
+.pill.planned { color: var(--planned); border-style: dashed; border-color: var(--planned); } .pill.planned i { border: 1.5px dashed var(--planned); }
+
+.kinds { display: grid; gap: 12px; grid-template-columns: repeat(auto-fill, minmax(min(100%, 150px), 1fr)); }
+.kind { display: grid; gap: 8px; justify-items: center; text-align: center; font-size: 13px; color: var(--text-dim); }
+.kind svg { width: 120px; height: 72px; }
+.kind b { color: var(--text); font-weight: 500; }
+
+.typespec { display: grid; gap: 4px; border: 1px solid var(--line); border-radius: 6px; overflow: hidden; }
+.typespec > div { display: grid; grid-template-columns: 130px 1fr; gap: 16px; align-items: baseline; padding: 14px 18px; border-bottom: 1px solid var(--line); min-width: 0; }
+.typespec > div:last-child { border-bottom: none; }
+.typespec .lbl { font-family: var(--mono); font-size: 11.5px; color: var(--text-muted); }
+.typespec .s { min-width: 0; overflow-wrap: anywhere; }
+@media (max-width: 560px) { .typespec > div { grid-template-columns: 1fr; gap: 4px; } }
+
+.registers { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); }
+.reg { border: 1px solid var(--line); border-radius: 6px; padding: 22px; display: grid; gap: 12px; align-content: start; }
+.reg .who { font-size: 13px; color: var(--text-muted); }
+.reg blockquote { margin: 0; padding-left: 16px; border-left: 2px solid var(--accent); font-size: 1.05rem; line-height: 1.55; }
+.reg ul { margin: 0; padding-left: 18px; color: var(--text-dim); font-size: 14px; display: grid; gap: 4px; }
+.banned { display: flex; flex-wrap: wrap; gap: 8px; }
+.banned span { font-size: 13px; padding: 4px 10px; border-radius: 4px; border: 1px solid var(--line); color: var(--text-muted); text-decoration: line-through; text-decoration-color: var(--text-muted); }
+
+.dos { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); }
+.dos > div { border: 1px solid var(--line); border-radius: 6px; padding: 18px 20px; }
+.dos h3 { margin-bottom: 8px; }
+.dos ul { margin: 0; padding-left: 18px; color: var(--text-dim); font-size: 14px; display: grid; gap: 4px; }
+
+.preview { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); }
+.preview figure { margin: 0; display: grid; gap: 8px; min-width: 0; }
+.preview figure > div { border: 1px solid var(--line); border-radius: 6px; overflow: hidden; line-height: 0; }
+.preview figure svg { width: 100%; height: auto; display: block; }
+.preview figcaption { font-size: 13px; color: var(--text-dim); }
+.cta { display: inline-flex; align-items: center; gap: 8px; padding: 10px 18px; border-radius: 6px; background: var(--accent); color: #070B14; font-weight: 600; text-decoration: none; font-size: 14px; }
+.files { font-family: var(--mono); font-size: 13px; color: var(--text-dim); }
+footer.foot { margin-top: 72px; padding-top: 24px; border-top: 1px solid var(--line); font-size: 13px; color: var(--text-muted); display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; }
+@media (prefers-reduced-motion: no-preference) {
+  .hero > * { animation: rise .6s ease-out both; }
+  .hero > *:nth-child(2) { animation-delay: .06s; } .hero > *:nth-child(3) { animation-delay: .12s; } .hero > *:nth-child(4) { animation-delay: .18s; }
+  @keyframes rise { from { opacity: 0; transform: translateY(10px); } }
+}
+</style>
+
+<div class="wrap">
+<header class="hero">
+  <div class="marks" aria-hidden="true">@@SANAD_MARK@@ @@EJADAH_MARK@@</div>
+  <p class="eyebrow">Design language · v1.0 draft · 2026-11-21</p>
+  <h1>A chain of evidence you can follow and regenerate.</h1>
+  <p class="lede">How Ejadah AI Labs and Sanad look, sound and are named on every surface: the product, the website, marketing and templates. Every visual is built from three things.</p>
+  <div class="triad"><span>node</span><span>edge</span><span>check</span></div>
+</header>
+
+<nav class="toc" aria-label="Chapters">
+  <a href="#naming"><b>01</b>Naming</a><a href="#logo"><b>02</b>Logo</a><a href="#colour"><b>03</b>Colour</a><a href="#type"><b>04</b>Type</a><a href="#voice"><b>05</b>Voice</a><a href="#imagery"><b>06</b>Imagery</a><a href="#product"><b>07</b>Product UI</a><a href="#marketing"><b>08</b>Marketing</a><a href="#templates"><b>09</b>Templates</a>
+</nav>
+
+<section class="ch" id="naming">
+  <div class="ch-head"><span class="num">01</span><h2>Sanad leads, Ejadah endorses</h2>
+  <p>Two brands in one family. Product surfaces say <strong>Sanad</strong>, with <em>by Ejadah AI Labs</em> as the endorsement. The company site leads with Ejadah and brings in Sanad as the proof.</p></div>
+  <div class="table-wrap"><table>
+    <tr><th>Use</th><th>Write exactly</th><th>Never</th></tr>
+    <tr><td>Company</td><td>Ejadah AI Labs (short: Ejadah)</td><td class="never">Ejadah Labs · EjadahAI · EJADAH</td></tr>
+    <tr><td>Product</td><td>Sanad</td><td class="never">SANAD · Sanad AI</td></tr>
+    <tr><td>Descriptor</td><td>Sanad, the Ejadah Engineering Intelligence Platform</td><td class="never">"Workbench" for Sanad · the sentence cut short</td></tr>
+    <tr><td>Lockup</td><td>Sanad · by Ejadah AI Labs</td><td class="never">Ejadah Sanad</td></tr>
+    <tr><td>Category</td><td>Engineering Intelligence</td><td class="never">as a module or class name</td></tr>
+    <tr><td>Philosophy</td><td>the Engineering AI Harness</td><td class="never">as a headline or opening line</td></tr>
+    <tr><td>Internal IDs</td><td><code>E-REW</code>, <code>E-AEW</code>, … in repos, ADRs, code</td><td class="never">in any public copy</td></tr>
+  </table></div>
+</section>
+
+<section class="ch" id="logo">
+  <div class="ch-head"><span class="num">02</span><h2>Two marks, flat and drawn once</h2>
+  <p>Vector redraws of the original PNGs: no gradients, gaps cut so the one-colour versions work on any ground. <strong>Drafts pending owner approval</strong>; the PNGs stay in use until then.</p></div>
+  <div class="grid">
+    <div class="tile"><div class="stage on-ink">@@SANAD_MARK@@</div><div class="cap"><b>sanad-mark.svg</b>Default, on ink</div></div>
+    <div class="tile"><div class="stage on-paper">@@SANAD_LIGHT@@</div><div class="cap"><b>sanad-mark-on-light.svg</b>On paper</div></div>
+    <div class="tile"><div class="stage on-ink" style="color:#E8ECF5">@@SANAD_MONO@@</div><div class="cap"><b>sanad-mark-mono.svg</b>One colour, any ground</div></div>
+    <div class="tile"><div class="stage on-ink">@@EJADAH_MARK@@</div><div class="cap"><b>ejadah-mark.svg</b>Company surfaces</div></div>
+    <div class="tile"><div class="stage on-paper">@@EJADAH_LIGHT@@</div><div class="cap"><b>ejadah-mark-on-light.svg</b>On paper</div></div>
+    <div class="tile"><div class="stage on-ink" style="color:#C9A227"><span style="display:flex;gap:18px;align-items:center">@@SANAD_SMALL32@@ @@SANAD_SMALL16@@</span></div><div class="cap"><b>sanad-mark-small.svg</b>32px and 16px: the links only</div></div>
+  </div>
+  <div class="dos">
+    <div><h3>Do</h3><ul><li>Clear space of one node diameter on every side.</li><li>Full mark at 48px or larger; below that, the small version.</li><li>Pick the variant made for the ground.</li></ul></div>
+    <div><h3>Never</h3><ul><li>Gradients, glows, bevels or metallic effects.</li><li>Rotate, stretch, outline or recolour.</li><li>Rebuild the mark from a screenshot or an image generator.</li><li>Set the two marks side by side as equals.</li></ul></div>
+  </div>
+</section>
+
+<section class="ch" id="colour">
+  <div class="ch-head"><span class="num">03</span><h2>Deep navy, gold, cool white</h2>
+  <p>The palette comes from the mark. Three colour families used consistently read as considered; a fourth reads as decorated. Ink is the dominant colour.</p></div>
+  <div class="proportion" role="img" aria-label="Proportions on a dark surface: ink about 83 percent, mist about 12 percent, gold about 5 percent">
+    <div style="flex:83;background:#070B14;color:#9AA7BF">ink ~83%</div>
+    <div style="flex:12;background:#E8ECF5;color:#070B14">mist</div>
+    <div style="flex:5;background:#C9A227;color:#070B14" title="gold, at most 10%"></div>
+  </div>
+  <div class="legend-row"><span>ink about 80–85%</span><span>mist about 10%</span><span>gold about 5%, never more than 10%</span><span>one gold element per view</span></div>
+  <div class="swatches">@@SWATCHES@@</div>
+  <h3>Why these colours</h3>
+  <div class="why">
+    <div><span class="dot" style="background:#070B14;border:1px solid #16203A"></span><h3>Navy: authority</h3><p>The colour of institutions trusted with consequences: aviation, banking, defence. It's also the engineer's dark-mode IDE, so site and product feel like one place.</p></div>
+    <div><span class="dot" style="background:#C9A227"></span><h3>Gold: verified</h3><p>A seal, a gold standard. Used sparingly it points the eye; overused it reads as luxury or crypto. Hence the cap.</p></div>
+    <div><span class="dot" style="background:#E8ECF5"></span><h3>Cool white: calm</h3><p>Less glare than pure white on a dark ground. Quiet confidence, not excitement.</p></div>
+    <div><span class="dot" style="background:linear-gradient(90deg,#7B5CFF,#2EC5FF)"></span><h3>What we avoid</h3><p>Electric blue, violet, neon and gradients: the generic AI-startup look our voice already rejects.</p></div>
+  </div>
+  <h3>Status: the three honesty words</h3>
+  <div class="status-row"><span class="pill progress"><i></i>build in progress</span><span class="pill planned"><i></i>planned</span></div>
+  <p class="prose">The word is always shown; colour only supports it. Never red or gold for status.</p>
+  <h3>Diagram kinds: the same as the product's pictures</h3>
+  <div class="kinds">@@KINDS@@</div>
+  <p class="prose">From Sanad's picture theme: a hue and a shape cue per kind, so diagrams still read in greyscale. Values switch with the theme of this page.</p>
+</section>
+
+<section class="ch" id="type">
+  <div class="ch-head"><span class="num">04</span><h2>Inter for words, mono for evidence</h2>
+  <p>Two open-licence fonts and no third. An identifier set in mono reads as something real you can check.</p></div>
+  <div class="typespec">
+    <div><span class="lbl">Display 600</span><span class="s" style="font-size:clamp(2rem,5vw,3.4rem);font-weight:600;letter-spacing:-.045em;line-height:1.05">Documents decay.</span></div>
+    <div><span class="lbl">H1 2.25rem</span><span class="s" style="font-size:2.25rem;font-weight:600;letter-spacing:-.03em;line-height:1.15">Traceability as architecture</span></div>
+    <div><span class="lbl">H2 1.5rem</span><span class="s" style="font-size:1.5rem;font-weight:600;letter-spacing:-.02em">What Sanad does today</span></div>
+    <div><span class="lbl">Eyebrow .75rem</span><span class="s eyebrow">Engineering Intelligence Platform</span></div>
+    <div><span class="lbl">Body 1rem</span><span class="s" style="color:var(--text-dim)">Every requirement carries its trace to design, code and test, rebuilt at any commit.</span></div>
+    <div><span class="lbl">Mono</span><span class="s mono">REQ-SYS-042 · @implements · a1b2c3d</span></div>
+  </div>
+</section>
+
+<section class="ch" id="voice">
+  <div class="ch-head"><span class="num">05</span><h2>Precise, plain, unhurried</h2>
+  <p>One voice, two registers. We sell to engineers accountable for safety, and they recognise overstatement instantly. Never claim certification: we produce evidence <em>for</em> it.</p></div>
+  <div class="registers">
+    <div class="reg"><span class="eyebrow">Assurance register</span><span class="who">Chief engineers, safety leads, auditors · website, one-pagers, sales</span>
+      <blockquote>Every requirement in Sanad carries its trace to design, code and test, rebuilt at any commit. When a link is missing, Sanad says so and names it.</blockquote>
+      <ul><li>Full, measured sentences</li><li>Problem and its cost first, then evidence</li><li>Standards names welcome</li></ul></div>
+    <div class="reg"><span class="eyebrow">Builder register</span><span class="who">Developers, SMB teams, consultancies · LinkedIn, Reddit, Show HN, Marketplace</span>
+      <blockquote>You changed <code>parseConfig()</code>. Sanad shows the three requirements it implements and the one test that no longer covers it. Before you push.</blockquote>
+      <ul><li>Shorter, second person</li><li>A concrete before and after</li><li>Still no hype</li></ul></div>
+  </div>
+  <h3>Words we don't use</h3>
+  <div class="banned"><span>AI-powered</span><span>enterprise-grade</span><span>seamless</span><span>revolutionary</span><span>game-changing</span><span>cutting-edge</span><span>certified</span><span>100%</span><span>complete</span><span>magic</span><span>unlock</span><span>supercharge</span></div>
+</section>
+
+<section class="ch" id="imagery">
+  <div class="ch-head"><span class="num">06</span><h2>The diagram is the argument</h2>
+  <p>We show structure, evidence and real output, not people pointing at screens.</p></div>
+  <div class="dos">
+    <div><h3>Use</h3><ul><li>Conceptual diagrams in node, edge, check geometry, with one gold node: the answer.</li><li>Engineering diagrams in the picture-theme colours.</li><li>Real screenshots on product surfaces, with real data.</li><li>Real outputs as proof: a report, a finding, a CI gate.</li></ul></div>
+    <div><h3>Never</h3><ul><li>Stock photos of people or offices.</li><li>AI illustrations, glowing brains, circuit textures.</li><li>Fake data presented as real.</li><li>Screenshots on the homepage.</li></ul></div>
+  </div>
+</section>
+
+<section class="ch" id="product">
+  <div class="ch-head"><span class="num">07</span><h2>Inside the editor, Sanad looks like the editor</h2>
+  <p>No brand colours in the product UI. Every colour is a VS Code theme token, so Sanad is right in light, dark and high-contrast themes automatically. The brand is the behaviour.</p></div>
+  <div class="table-wrap"><table>
+    <tr><th>Situation</th><th>Write</th><th>Not</th></tr>
+    <tr><td>Analysis can't run</td><td>No hazard role declared — safety analysis stood down.</td><td class="never">Safety: N/A</td></tr>
+    <tr><td>Inferred finding</td><td>Candidate: this sentence may be ambiguous. Your call.</td><td class="never">Ambiguous requirement</td></tr>
+    <tr><td>Destructive action</td><td>Delete REQ-SYS-042? It stays in Git history and can be restored.</td><td class="never">Are you sure?</td></tr>
+    <tr><td>AI suggestion</td><td>Proposed — not written until you confirm.</td><td class="never">AI generated</td></tr>
+  </table></div>
+  <p class="prose">The brand appears in four places only: the activity-bar icon, the Marketplace listing, the walkthrough and the README header.</p>
+</section>
+
+<section class="ch" id="marketing">
+  <div class="ch-head"><span class="num">08</span><h2>Digital marketing</h2>
+  <p>Ink ground, one headline of eight words at most, one gold element, the lockup bottom-left, a status word for every capability named.</p></div>
+  <div class="table-wrap"><table>
+    <tr><th>Asset</th><th>Size</th><th>Register</th></tr>
+    <tr><td>LinkedIn / X post image</td><td class="mono">1200 × 627</td><td>either</td></tr>
+    <tr><td>LinkedIn carousel slide</td><td class="mono">1080 × 1350</td><td>either</td></tr>
+    <tr><td>LinkedIn company banner</td><td class="mono">1584 × 396</td><td>Assurance</td></tr>
+    <tr><td>Open Graph image</td><td class="mono">1200 × 630</td><td>Assurance</td></tr>
+    <tr><td>GitHub social preview</td><td class="mono">1280 × 640</td><td>Builder</td></tr>
+    <tr><td>Article header</td><td class="mono">1600 × 840</td><td>Assurance</td></tr>
+  </table></div>
+  <p style="color:var(--text-dim);max-width:68ch"><strong style="color:var(--text)">UTM naming:</strong> <code>utm_campaign=beta-&lt;stage&gt;</code>, <code>utm_content=&lt;format&gt;-&lt;yyyymmdd&gt;</code>, all lowercase with hyphens.</p>
+</section>
+
+<section class="ch" id="templates">
+  <div class="ch-head"><span class="num">09</span><h2>Templates</h2>
+  <p>Generated from the tokens and the logo drawings, so they can't drift. Shown here filled with approved copy.</p></div>
+  <div class="preview">
+    <figure><div>@@POST_EXAMPLE@@</div><figcaption>Social post, 1200 × 627</figcaption></figure>
+    <figure><div>@@GH_EXAMPLE@@</div><figcaption>GitHub social preview, 1280 × 640</figcaption></figure>
+  </div>
+  <div><a class="cta" href="https://claude.ai/artifact/PNkkcRSB4pQtT1D2mgJxQp">Open the slide master</a></div>
+  <p class="files">ejadah-foundation/brand/ · tokens/tokens.json · logos/ · templates/</p>
+</section>
+
+<footer class="foot"><span>Sanad · by Ejadah AI Labs</span><span>Source of truth: ejadah-foundation/brand/ · contrast-checked, 56 of 56 pairs</span></footer>
+</div>

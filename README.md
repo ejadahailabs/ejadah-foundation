@@ -26,7 +26,8 @@ only cost the organisation its memory.
 
 | Directory | Contains | Changes |
 |---|---|---|
-| `company/` | Vision, Mission, Values, Branding | rarely |
+| `company/` | Vision, Mission, Values | rarely |
+| `brand/` | The design language: naming, logo, colour, type, voice, product UI, marketing, templates, tokens | with owner approval |
 | `engineering/` | Principles, standards, AI governance | deliberately |
 | `product/` | Platform architecture, capabilities, naming, roadmap | per milestone |
 | `adr/` | Company-level decisions | append-only |
