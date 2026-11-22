@@ -28,6 +28,23 @@ consistently read as considered; a fourth reads as decorated.**
 - **What we deliberately don't use:** electric blue, violet, neon and gradients. That is the
   generic "AI startup" look, and our voice already rejects "AI-powered".
 
+### What the research supports, and what it doesn't
+
+The reasons above are brand judgement. Where peer-reviewed work bears on them, this is what
+it says. We cite the papers, not summaries of them, and we don't claim more than they found.
+
+| Finding | Study | What we do with it |
+|---|---|---|
+| Dark text on a light ground is read more accurately than light on dark, and **the advantage grows as text gets smaller**. Readers don't notice the penalty themselves. | Piepenbrock, Mayr & Buchner, *Ergonomics* 56 (2013); *Human Factors* 56 (2014) | Anything read closely (documents, print, evidence, small tables) uses **paper**. The dark website is for short, large marketing text, which is where the effect is smallest. |
+| Emotional arousal comes from **saturation and brightness** as much as hue; saturated, bright colours raise arousal on both self-report and skin conductance. | Wilms & Oberfeld, *Psychological Research* 82 (2018) | Large grounds stay low-saturation (ink, paper). Saturation is spent on one small element: the gold rule. |
+| Single-hue brand colours map onto brand personality; blue is linked with **competence** (not "trust", a common misquote), black with sophistication. | Labrecque & Milne, *J. Academy of Marketing Science* 40 (2012) | Supports a near-black navy ground. It doesn't justify adding a brighter blue: competence comes from the product, not a hue. |
+| Colour–emotion associations are **largely shared across 30 nations** (mean similarity r = .88), with smaller national differences. | Jonauskaite et al., *Psychological Science* 31 (2020) | One palette for every market. No regional variants. |
+| Red seen before a hard evaluative task was linked to worse performance (avoidance motivation). | Elliot et al., *J. Experimental Psychology: General* 136 (2007) | **Replications have been mixed**, so we treat this as a reason for caution, not a proven effect. It's consistent with our rule anyway: red means hazard and nothing else. |
+
+What the research does **not** tell us: that any hue makes buyers trust a product, or that a
+colour "works" independent of where it's used. Claims like that in blogs and vendor articles
+aren't evidence, so this guide doesn't use them.
+
 ## The gold rule
 
 Gold marks **one** thing per view: the mark's E, the key node in a diagram, the primary
